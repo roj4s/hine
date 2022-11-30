@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  db:
+    container_name: db
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=root
+      - POSTGRES_DATABASE=db
+    ports:
+      - 5434:5432
+      - 11214:11211
+
+  api:
+      container_name: api
+      build:
+          dockerfile: ./api/Dockerfile
+          context: .
+      ports:
+          - 91:80
+      command: ["./run.sh"]
