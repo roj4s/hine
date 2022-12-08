@@ -14,9 +14,31 @@ services:
 
   api:
       container_name: api
+      image: roj4s/hine_api:latest
       build:
           dockerfile: ./api/Dockerfile
           context: .
       ports:
           - 91:80
       command: ["./run.sh"]
+
+  frontend_dev:
+    build:
+      context: ./frontend
+      target: dev
+    image: roj4s/hine_frontend_dev:latest
+    ports:
+      - "3002:3000"
+    container_name: frontend_dev
+    stdin_open: true
+    volumes:
+       - ./frontend:/frontend
+
+  frontend:
+    build:
+      context: ./frontend
+      target: prod
+    image: roj4s/hine_frontend:latest
+    ports:
+      - "8080:80"
+    container_name: frontend_prod
