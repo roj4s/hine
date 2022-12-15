@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Grid from "@mui/material/Grid";
 
@@ -46,14 +31,14 @@ function Dashboard() {
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
-                color="dark"
-                icon="weekend"
-                title="Bookings"
-                count={281}
+                color="primary"
+                icon="person_add"
+                title="Pacientes"
+                count="+91"
                 percentage={{
                   color: "success",
-                  amount: "+55%",
-                  label: "than lask week",
+                  amount: "",
+                  label: "Pacientes adicionados",
                 }}
               />
             </MDBox>
@@ -62,12 +47,12 @@ function Dashboard() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 icon="leaderboard"
-                title="Today's Users"
+                title="Estatisticas coletadas"
                 count="2,300"
                 percentage={{
                   color: "success",
                   amount: "+3%",
-                  label: "than last month",
+                  label: "comparado con ontem",
                 }}
               />
             </MDBox>
@@ -77,12 +62,12 @@ function Dashboard() {
               <ComplexStatisticsCard
                 color="success"
                 icon="store"
-                title="Revenue"
+                title="Estabelecimentos visitados"
                 count="34k"
                 percentage={{
                   color: "success",
                   amount: "+1%",
-                  label: "than yesterday",
+                  label: "comparado com ontem",
                 }}
               />
             </MDBox>
@@ -90,14 +75,14 @@ function Dashboard() {
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
-                color="primary"
-                icon="person_add"
-                title="Followers"
-                count="+91"
+                color="dark"
+                icon="weekend"
+                title="Lorem ipsum"
+                count={281}
                 percentage={{
                   color: "success",
-                  amount: "",
-                  label: "Just updated",
+                  amount: "+55%",
+                  label: "semana passada",
                 }}
               />
             </MDBox>
@@ -109,9 +94,9 @@ function Dashboard() {
               <MDBox mb={3}>
                 <ReportsBarChart
                   color="info"
-                  title="website views"
-                  description="Last Campaign Performance"
-                  date="campaign sent 2 days ago"
+                  title="Estatisticas por dia"
+                  description="Coletadas pelo grupo"
+                  date="atualizado faz 1 dia"
                   chart={reportsBarChartData}
                 />
               </MDBox>
@@ -120,13 +105,13 @@ function Dashboard() {
               <MDBox mb={3}>
                 <ReportsLineChart
                   color="success"
-                  title="daily sales"
+                  title="estatisticas do mes"
                   description={
                     <>
-                      (<strong>+15%</strong>) increase in today sales.
+                      (<strong>+15%</strong>) incremento mensal.
                     </>
                   }
-                  date="updated 4 min ago"
+                  date="atualizado faz 4 minutos"
                   chart={sales}
                 />
               </MDBox>
@@ -135,9 +120,9 @@ function Dashboard() {
               <MDBox mb={3}>
                 <ReportsLineChart
                   color="dark"
-                  title="completed tasks"
-                  description="Last Campaign Performance"
-                  date="just updated"
+                  title="atividades completadas"
+                  description="Ano passado"
+                  date="atualizado recentemente"
                   chart={tasks}
                 />
               </MDBox>
