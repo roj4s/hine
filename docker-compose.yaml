@@ -21,6 +21,8 @@ services:
       ports:
           - 91:80
       command: ["./run.sh"]
+      volumes:
+          - ./api/api:/srv/api/api
 
   frontend_dev:
     build:
